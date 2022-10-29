@@ -1,0 +1,11 @@
+name: CaptureMobs
+version: 1.0
+author: Lord_Meca
+main: fr.lordmeca.capturemobs.Main
+api-version: 1.16
+commands:
+  captureball:
+    description: Commande admin de Capture Balls.
+    aliases: [captureballs, cb, monsterballs, monstersballs, monsterball, monstersball]
+  capturemobs:
+    aliases: cm

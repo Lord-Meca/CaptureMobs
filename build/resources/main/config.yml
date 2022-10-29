@@ -1,0 +1,209 @@
+#--------------------------------------------#
+#                                            #
+#     CONFIGURATION GENERAL - CAPTURE MOBS   #
+#                                            #
+#--------------------------------------------#
+
+command:
+  permission: "captureballs.use"
+  permission_message: "§cVous n'avez pas la permission !"
+  correct_usage: "§c/captureballs give [joueur] [nombre]"
+  player_not_found: "§cCe joueur n'existe pas ou n'est pas connecté !"
+
+item:
+  captureballs:
+    material: SNOWBALL # /!\ DONT CHANGE THE ITEM
+
+    name_no_mob_and_empty: "§7» §eCaptureBalls §7- §c(VIDE)"
+    name_mob_and_empty: "§7» §eCaptureBalls §7- §a({mob}) §7- §4(VIDE)"
+    name_mob_and_full: "§7» §eCaptureBalls §7- §a({mob}) §7- §2(PLEINE)"
+
+messages:
+  prefix: "§f§lCaptureMobs §8»"
+
+  throw_monsters_when_ko: "§cVotre monstre est K.O, veuillez le soigner le plus rapidement possible !"
+  turnMessageInPlayersDuel: "§aC'est au tour de §l{player} §ad'attaquer ! §8«"
+  monsterInflictedDamageInPlayersDuel: "§b§l{attacker} §7a infligé §c§l{damage} HP §7au monstre de §a§l{victim}"
+  monsterInflictedDamageToPlayer: "§c§l{enemy} §7vous a infligé §e§l{damage} HP"
+  playerInflictedDamageToWildernessMonster: "§7Votre §a§l{yourMonster} §7a infligé §c§l{damage} HP §7à §e§l{enemyMonster}"
+  monsterFoundYou: "§6Un monstre vous a trouvé !"
+
+  titleHealBlock: "§bSoigner vos monstres"
+  monsterHealed: "§7Le monstre §e{monster} #{id} §7a été §asoigné §7!"
+  monsterAlreadyHealed: "§cVotre monstre a déjà toute sa vie !"
+
+  youAreAlreadyInFight: "§cVous êtes déjà en combat !"
+  playerNotFound: "§cCe joueur n'existe pas ou n'est pas connecté !"
+  targetPlayerAlreadyInFight: "§cCe joueur est déjà en combat !"
+
+  monsterDontHaveAttacks: "§cVotre monstre n'a pas d'attaques !"
+
+  killWildernessMonster: "§7Vous avez tué §a'{enemy}'"
+
+  yourMonsterWonXp: "§7Votre §e{ally} §7a gagné §b{xpwin} §lExp §7!"
+
+  yourMonsterLoose1: "§cVotre §e{ally}"
+  yourMonsterLoose2: "§ca perdu !"
+
+  duelBeetweenPlayerIsFinish: "§e§lFin du duel §8- §6Le vainqueur est §c§l{winner}"
+
+  cantCatchThisMonster: "§cVous ne pouvez pas attraper ce monstre !"
+
+  youMustHoldFullCaptureBall: "§cVous devez tenir dans la main une Capture Ball pleine !"
+
+
+
+fight:
+  attacks:
+    WOLF:
+
+      items:
+        1: # First Attack
+          material: PRISMARINE_SHARD
+          name: "§4Attaque §7<> §cMorsure"
+        2:
+          material: BONE
+          name: "§9Attaque §7<> §bCoup de Queue"
+
+      beetween_level_1_and_30:
+        "§4Attaque §7<> §cMorsure": # Write the same name above
+          attack1: 7
+        "§9Attaque §7<> §bCoup de Queue":
+          attack2: 5
+      beetween_level_30_and_50:
+        "§4Attaque §7<> §cMorsure":
+          attack1: 12
+        "§9Attaque §7<> §bCoup de Queue":
+          attack2: 10
+      beetween_level_50_and_100:
+        "§4Attaque §7<> §cMorsure":
+          attack1: 35
+        "§9Attaque §7<> §bCoup de Queue":
+          attack2: 25
+
+    CHICKEN:
+
+      items:
+        1: # First Attack
+          material: FLINT
+          name: "§6Attaque §7<> §eGriffes"
+        2:
+          material: HOPPER
+          name: "§8Attaque §7<> §7Bec Vrille"
+      beetween_level_1_and_30:
+        "§6Attaque §7<> §eGriffes":
+          attack1: 2
+        "§8Attaque §7<> §7Bec Vrille":
+          attack2: 5
+      beetween_level_30_and_50:
+        "§6Attaque §7<> §eGriffes":
+          attack1: 10
+        "§8Attaque §7<> §7Bec Vrille":
+          attack2: 14
+      beetween_level_50_and_100:
+        "§6Attaque §7<> §eGriffes":
+          attack1: 25
+        "§8Attaque §7<> §7Bec Vrille":
+          attack2: 35
+
+    PIG:
+
+      items:
+        1: # First Attack
+          material: SKELETON_SKULL
+          name: "§5Attaque §7<> §dCoup de boule"
+        2:
+          material: STRING
+          name: "§2Attaque §7<> §aChatouillement"
+      beetween_level_1_and_30:
+        "§5Attaque §7<> §dCoup de boule":
+          attack1: 8
+        "§2Attaque §7<> §aChatouillement":
+          attack2: 1
+      beetween_level_30_and_50:
+        "§5Attaque §7<> §dCoup de boule":
+          attack1: 21
+        "§2Attaque §7<> §aChatouillement":
+          attack2: 13
+      beetween_level_50_and_100:
+        "§5Attaque §7<> §dCoup de boule":
+          attack1: 35
+        "§2Attaque §7<> §aChatouillement":
+          attack2: 20
+
+    WITHER:
+
+      items:
+        1: # First Attack
+          material: BOW
+          name: "§d§lAttaque Ultime §7<> §5Raffales d'explosions"
+        2:
+          material: STRING
+          name: "§8Attaque §7<> §7Déflagration"
+      beetween_level_1_and_30:
+        "§d§lAttaque Ultime §7<> §5Raffales d'explosions":
+          attack1: 35
+        "§8Attaque §7<> §7Déflagration":
+          attack2: 13
+      beetween_level_30_and_50:
+        "§d§lAttaque Ultime §7<> §5Raffales d'explosions":
+          attack1: 55
+        "§8Attaque §7<> §7Déflagration":
+          attack2: 26
+      beetween_level_50_and_100:
+        "§d§lAttaque Ultime §7<> §5Raffales d'explosions":
+          attack1: 85
+        "§8Attaque §7<> §7Déflagration":
+          attack2: 38
+
+    SHULKER:
+
+      items:
+        1: # First Attack
+          material: CAULDRON
+          name: "§2§lAttaque Ultime §7<> §aConfinement"
+        2:
+          material: BLAZE_ROD
+          name: "§9Attaque §7<> §bLaser baveux"
+      beetween_level_1_and_30:
+        "§2§lAttaque Ultime §7<> §aConfinement":
+          attack1: 20
+        "§9Attaque §7<> §bLaser baveux":
+          attack2: 7
+      beetween_level_30_and_50:
+        "§2§lAttaque Ultime §7<> §aConfinement":
+          attack1: 35
+        "§9Attaque §7<> §bLaser baveux":
+          attack2: 12
+      beetween_level_50_and_100:
+        "§2§lAttaque Ultime §7<> §aConfinement":
+          attack1: 45
+        "§9Attaque §7<> §bLaser baveux":
+          attack2: 24
+
+    GIANT:
+
+      items:
+        1: # First Attack
+          material: DIAMOND_BOOTS
+          name: "§4§lAttaque Ultime §7<> §cPiétinement"
+        2:
+          material: DIRT_PATH
+          name: "§6Attaque §7<> §eEcrase-Sol"
+      beetween_level_1_and_30:
+        "§4§lAttaque Ultime §7<> §cPiétinement":
+          attack1: 25
+        "§6Attaque §7<> §eEcrase-Sol":
+          attack2: 15
+      beetween_level_30_and_50:
+        "§4§lAttaque Ultime §7<> §cPiétinement":
+          attack1: 45
+        "§6Attaque §7<> §eEcrase-Sol":
+          attack2: 24
+      beetween_level_50_and_100:
+        "§4§lAttaque Ultime §7<> §cPiétinement":
+          attack1: 75
+        "§6Attaque §7<> §eEcrase-Sol":
+          attack2: 36
+
+
